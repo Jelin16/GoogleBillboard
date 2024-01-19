@@ -2,32 +2,22 @@ public final static String e = "2.7182818284590452353602874713526624977572470936
 
 public void setup()  
 {   
-    for (int i = 0; i <= e.length() - 10; i++) {
-        String digits = e.substring(i, i + 10);
-        double dNum = Double.parseDouble(digits);
+  for (int i = 0; i <= e.length() - 10; i++) {
+    String digits = e.substring(i, i + 10);
+    double dNum = Double.parseDouble(digits);
 
-        if (isPrime(dNum)) {
-            System.out.println("First 10-digit prime found: " + dNum);
-        }
+    if (isPrime(dNum)) {
+      System.out.println("First 10-digit prime found: " + dNum);
     }
-}
-
-public void draw()  
-{   
-    // Not needed for this assignment
+  }
 }
 
 public boolean isPrime(double dNum)  
 {   
-    if (dNum < 2) {
-        return false;
-    }
-    
-    for (int i = 2; i <= Math.sqrt(dNum); i++) {
-        if (dNum % i == 0) {
-            return false;
-        }
-    }
-
-    return true;  
-}
+  if (dNum < 2)
+    return false;
+  for (int i = 2; i <= Math.sqrt(dNum); i++)
+    if (dNum % i == 0)
+      return false;
+  return true;
+} 
